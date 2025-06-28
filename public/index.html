@@ -2,27 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Netflix Clone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodie - Eat Fresh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header class="navbar">
-    <h1><span class="netflix-red">N</span>etflix</h1>
+    <div class="logo">🍴 <span class="foodie-logo">Foodie</span></div>
+    <input type="text" id="searchInput" placeholder="Search dishes...">
+    <button onclick="showLogin()">Login</button>
   </header>
 
+  <marquee behavior="scroll" direction="left" class="marquee">
+    🍕 20% OFF on all Pizza orders! 🥤 Free Coke with Biryani! 🍰 Get a Dessert Free on orders above ₹499!
+  </marquee>
+
   <section class="hero">
-    <h2>Stream the Future</h2>
-    <p>Unlimited movies, shows, and more. Anytime. Anywhere.</p>
+    <h1>Fresh & Tasty Food Delivered To You</h1>
+    <p>Discover mouth-watering meals at your fingertips</p>
+    <a href="#menu" class="btn">🍽️ View Menu</a>
   </section>
 
-  <section class="movies">
-    <h2 class="section-title">🔥 Trending Now</h2>
-    <div id="movie-list" class="movie-list"></div>
+  <section class="menu-section" id="menu">
+    <h2>Our Popular Dishes</h2>
+    <div class="menu-grid" id="menuGrid"></div>
   </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Netflix Clone by You</p>
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="hideLogin()">&times;</span>
+      <h2>Login</h2>
+      <input type="text" placeholder="Username">
+      <input type="password" placeholder="Password">
+      <button>Submit</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Foodie App. Made with ❤️ and Masala</p>
   </footer>
 
   <script src="script.js"></script>
